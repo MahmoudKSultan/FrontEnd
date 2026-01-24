@@ -1,6 +1,10 @@
 import React from 'react';
 import { MdCheckCircleOutline } from 'react-icons/md';
 import { formatSubcategoryName } from '../../../../utils/helperFunctions';
+import {
+  DatasetItem,
+  IntelligenceItem,
+} from '../../../../components/CustomReportForm/services/reportPricingService';
 
 interface PurchaseSuccessModalProps {
   purchaseData: {
@@ -12,36 +16,12 @@ interface PurchaseSuccessModalProps {
       message: string;
     };
     intelligences?: Array<{
-      intelligence: {
-        city_name: string;
-        country_name: string;
-        user_id: string;
-        cost: number;
-        expiration: string | null;
-        explanation: string;
-        is_currently_owned: boolean;
-        free_as_part_of_package: boolean | null;
-        description: string;
-        data_variables: Record<string, string>;
-        intelligence_name: string;
-      };
+      intelligence: IntelligenceItem;
       status: string;
       message: string;
     }>;
     datasets?: Array<{
-      dataset: {
-        city_name: string;
-        country_name: string;
-        user_id: string;
-        cost: number;
-        expiration: string | null;
-        explanation: string;
-        is_currently_owned: boolean;
-        free_as_part_of_package: boolean | null;
-        description: string;
-        data_variables: Record<string, string>;
-        dataset_name: string;
-      };
+      dataset: DatasetItem;
       status: string;
       message: string;
     }>;
