@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdCheckCircleOutline } from 'react-icons/md';
 import { formatSubcategoryName } from '../../../../utils/helperFunctions';
-import {
+import type {
   DatasetItem,
   IntelligenceItem,
 } from '../../../../components/CustomReportForm/services/reportPricingService';
